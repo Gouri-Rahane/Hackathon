@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(to right, #dbeafe, #e0f2fe);
+}
+
+.todo-card {
+  width: 450px;
+  border-radius: 15px;
+}
+
+.list-group-item {
+  border-radius: 10px !important;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #f1f5f9;
+}

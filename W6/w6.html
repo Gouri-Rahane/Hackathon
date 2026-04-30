@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PICT College Website</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #eef4ff;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(90deg, #0d6efd, #0047ab);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
+            background-size: cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        /* CARDS */
+        .card {
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(90deg, #0d6efd, #0047ab);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ✅ NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">PICT</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="#toppers">Toppers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- SPACING -->
+<div style="margin-top:70px;"></div>
+
+<!-- ✅ HERO -->
+<div class="hero" id="home">
+    <h1>Pune Institute of Computer Technology</h1>
+    <p>Empowering Future Engineers</p>
+</div>
+
+<!-- ✅ ACHIEVEMENTS -->
+<div class="container" id="achievements">
+    <h2 class="section-title">Our Achievements</h2>
+    <p class="text-center">
+        Ranked among top engineering colleges with excellent academic performance and placements.
+    </p>
+</div>
+
+<!-- ✅ TOPPERS -->
+<div class="container" id="toppers">
+    <h2 class="section-title">Year-Wise Toppers</h2>
+
+    <div class="row">
+
+        <!-- CARD TEMPLATE -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/100">
+                <div class="card-body text-center">
+                    <h5>2023 Topper</h5>
+                    <p>Rahul Sharma</p>
+                    <p>Computer</p>
+                    <span class="badge bg-success">95%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/100">
+                <div class="card-body text-center">
+                    <h5>2022 Topper</h5>
+                    <p>Sneha Patil</p>
+                    <p>IT</p>
+                    <span class="badge bg-success">93%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/100">
+                <div class="card-body text-center">
+                    <h5>2021 Topper</h5>
+                    <p>Amit Joshi</p>
+                    <p>Electronics</p>
+                    <span class="badge bg-success">92%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MORE -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/100">
+                <div class="card-body text-center">
+                    <h5>2020 Topper</h5>
+                    <p>Priya Deshmukh</p>
+                    <p>Computer</p>
+                    <span class="badge bg-success">94%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/100">
+                <div class="card-body text-center">
+                    <h5>2019 Topper</h5>
+                    <p>Karan Mehta</p>
+                    <p>IT</p>
+                    <span class="badge bg-success">91%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/100">
+                <div class="card-body text-center">
+                    <h5>2018 Topper</h5>
+                    <p>Neha Kulkarni</p>
+                    <p>Electronics</p>
+                    <span class="badge bg-success">90%</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ✅ CONTACT -->
+<div class="container text-center my-5" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p>Pune Institute of Computer Technology</p>
+    <p>📍 Pune, Maharashtra</p>
+    <p>📞 9876543210</p>
+    <p>✉ info@pict.edu</p>
+
+    <p>
+        <a href="#" class="btn btn-outline-primary">Facebook</a>
+        <a href="#" class="btn btn-outline-danger">Instagram</a>
+        <a href="#" class="btn btn-outline-dark">LinkedIn</a>
+    </p>
+</div>
+
+<!-- ✅ FOOTER -->
+<footer class="text-white text-center p-3">
+    <p>© 2026 PICT College</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

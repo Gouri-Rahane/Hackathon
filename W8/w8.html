@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Event Registration</h2>
+
+    <form id="form">
+
+        <!-- Name -->
+        <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+            <small class="text-muted">Enter your full name</small>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email"
+                   placeholder="Email Address"
+                   required pattern=".+@.+\.com">
+            <small class="text-muted">Format: example@gmail.com</small>
+        </div>
+
+        <!-- Mobile -->
+        <div class="mb-3">
+            <input type="tel" class="form-control" id="mobile"
+                   placeholder="Mobile Number"
+                   required pattern="[0-9]{10}">
+            <small class="text-muted">Enter 10-digit mobile number</small>
+        </div>
+
+        <!-- Event -->
+        <div class="mb-3">
+            <select class="form-select" id="event" required>
+                <option value="">Choose Event</option>
+                <option>Technical Workshop</option>
+                <option>Seminar</option>
+                <option>Hackathon</option>
+            </select>
+        </div>
+
+        <!-- Date -->
+        <div class="mb-3">
+            <input type="date" class="form-control" id="date" required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+            <input type="password" class="form-control" id="password"
+                   placeholder="Password"
+                   required
+                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&]).{8,}">
+            <small class="text-muted">
+                Min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
+            </small>
+        </div>
+
+        <button class="btn btn-primary w-100">Register</button>
+
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById("form");
+
+    const inputs = form.querySelectorAll("input, select");
+
+    inputs.forEach(input => {
+        input.addEventListener("input", () => {
+            if (input.checkValidity()) {
+                input.classList.remove("is-invalid");
+                input.classList.add("is-valid");
+            } else {
+                input.classList.remove("is-valid");
+                input.classList.add("is-invalid");
+            }
+        });
+    });
+
+    form.addEventListener("submit", (e) => {
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                input.classList.add("is-invalid");
+            }
+        });
+
+        if (!form.checkValidity()) {
+            e.preventDefault();
+        }
+    });
+</script>
+
+</body>
+</html>

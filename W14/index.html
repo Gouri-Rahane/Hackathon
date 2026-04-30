@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User List</h2>
+
+<button onclick="getUsers()">Load Users</button>
+
+<div id="output"></div>
+
+<script>
+function getUsers() {
+
+    fetch("http://localhost:3000/api")
+    .then(res => res.json())
+    .then(data => {
+
+        let result = "";
+
+        data.forEach(item => {
+            result += `
+                <div class="card">
+                    <h3>${item.name}</h3>
+                    <p>${item.email}</p>
+                </div>
+            `;
+        });
+
+        document.getElementById("output").innerHTML = result;
+    })
+    .catch(err => {
+        document.getElementById("output").innerHTML = "Error loading data";
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <h2>Login</h2>
+
+  <input #email class="form-control mb-2" placeholder="Email">
+  <input #pass type="password" class="form-control mb-2" placeholder="Password">
+
+  <button class="btn btn-success w-100" (click)="login(email.value, pass.value)">
+    Login
+  </button>
+
+  <p class="mt-2 text-center">
+    New user? <a routerLink="/">Register</a>
+  </p>
+</div>

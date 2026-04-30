@@ -1,0 +1,17 @@
+STEP 5: RUN SERVER
+
+👉 Open terminal in W14 folder:
+
+node server.js
+
+You will see:
+
+Server running on http://localhost:3000
+🌐 STEP 6: RUN FRONTEND
+
+👉 Open index.html using:
+
+Live Server OR
+Double click file
+
+👉 Click "Load Users"

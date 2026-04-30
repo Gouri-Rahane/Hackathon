@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+
+<style>
+body { margin:0; font-family: Arial; }
+
+.navbar {
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+.navbar a {
+    color:white;
+    margin:15px;
+    text-decoration:none;
+}
+
+.container {
+    text-align:center;
+    padding:40px;
+}
+
+input, textarea {
+    width:250px;
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    border:1px solid gray;
+}
+
+button {
+    padding:10px 20px;
+    background:orange;
+    border:none;
+    color:white;
+    border-radius:5px;
+}
+
+button:hover {
+    background:red;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</div>
+
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <p>Email: abc@gmail.com</p>
+    <p>Phone: 9876543210</p>
+
+    <h3>Send Message</h3>
+
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Your Email"><br>
+    <textarea placeholder="Your Message"></textarea><br>
+
+    <button>Submit</button>
+</div>
+
+</body>
+</html>

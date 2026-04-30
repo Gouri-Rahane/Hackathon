@@ -1,0 +1,23 @@
+[
+  {
+    "name": "John",
+    "designation": "Manager",
+    "department": "HR",
+    "salary": 50000,
+    "image": "https://via.placeholder.com/100"
+  },
+  {
+    "name": "Anna",
+    "designation": "Developer",
+    "department": "IT",
+    "salary": 40000,
+    "image": "https://via.placeholder.com/100"
+  },
+  {
+    "name": "Raj",
+    "designation": "Tester",
+    "department": "QA",
+    "salary": 35000,
+    "image": "https://via.placeholder.com/100"
+  }
+]

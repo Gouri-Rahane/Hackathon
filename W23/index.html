@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PICT Clubs</title>
+
+    <!-- jQuery Mobile -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        /* 🔵 PICT Theme */
+        .ui-header {
+            background: #003366 !important;
+            color: white !important;
+        }
+
+        .ui-btn {
+            background: #0059b3 !important;
+            color: white !important;
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #003366;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🏠 HOME PAGE -->
+<div data-role="page" id="home">
+
+    <div data-role="header" data-position="fixed">
+        <h1>PICT Clubs</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active">Home</a></li>
+                <li><a href="#clubs">Clubs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+    <h2>Student Clubs & Activities</h2>
+    <p>PICT offers a variety of student clubs for technical and cultural growth.</p>
+
+    <!-- 🎯 Highlight Section -->
+    <div data-role="collapsible">
+        <h3>Why Join Clubs?</h3>
+        <ul>
+            <li>Improve technical skills</li>
+            <li>Participate in competitions</li>
+            <li>Build teamwork & leadership</li>
+            <li>Enhance resume</li>
+        </ul>
+    </div>
+
+    <!-- 🏆 Featured Clubs -->
+    <h3>Featured Clubs</h3>
+
+    <div style="display:flex; gap:10px; overflow-x:auto;">
+
+        <div style="min-width:150px; background:#e6f0ff; padding:10px; border-radius:10px;">
+            <h4>Coding Club</h4>
+            <p>Hackathons & coding contests</p>
+        </div>
+
+        <div style="min-width:150px; background:#e6f0ff; padding:10px; border-radius:10px;">
+            <h4>Robotics Club</h4>
+            <p>Build robots & automation</p>
+        </div>
+
+        <div style="min-width:150px; background:#e6f0ff; padding:10px; border-radius:10px;">
+            <h4>Dance Club</h4>
+            <p>Cultural performances</p>
+        </div>
+
+    </div>
+
+    <!-- 🧠 Stats Section -->
+    <h3>Our Impact</h3>
+    <p>✔ 10+ Clubs</p>
+    <p>✔ 1000+ Students</p>
+    <p>✔ 50+ Events yearly</p>
+
+</div>
+
+    <div class="footer">© 2026 PICT Clubs</div>
+
+</div>
+
+---
+
+<!-- 🎯 CLUBS PAGE -->
+<div data-role="page" id="clubs">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Clubs</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#clubs" class="ui-btn-active">Clubs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <h2>Our Clubs</h2>
+
+        <!-- 💻 CODING CLUB -->
+        <div data-role="collapsible">
+            <h3>Coding Club</h3>
+            <p><b>Description:</b> Focus on programming, competitive coding and hackathons.</p>
+            <p><b>Achievements:</b> Winners of national coding competitions.</p>
+            <img src="https://via.placeholder.com/300">
+        </div>
+
+        <!-- 🤖 ROBOTICS CLUB -->
+        <div data-role="collapsible">
+            <h3>Robotics Club</h3>
+            <p><b>Description:</b> Build robots and participate in tech events.</p>
+            <p><b>Achievements:</b> RoboFest winners.</p>
+            <img src="https://via.placeholder.com/300">
+        </div>
+
+        <!-- 💃 DANCE CLUB -->
+        <div data-role="collapsible">
+            <h3>Dance Club</h3>
+            <p><b>Description:</b> Cultural performances and competitions.</p>
+            <p><b>Achievements:</b> Inter-college dance champions.</p>
+            <img src="https://via.placeholder.com/300">
+        </div>
+
+    </div>
+
+    <div class="footer">© 2026 PICT Clubs</div>
+
+</div>
+
+---
+
+<!-- 📞 CONTACT PAGE -->
+<div data-role="page" id="contact">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Contact</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#clubs">Clubs</a></li>
+                <li><a href="#contact" class="ui-btn-active">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <h2>Contact Clubs Team</h2>
+
+        <p><b>Email:</b> clubs@pict.edu</p>
+        <p><b>Phone:</b> 9876543210</p>
+
+        <div data-role="collapsible">
+            <h3>Send Message</h3>
+            <input placeholder="Your Name">
+            <input placeholder="Your Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Submit</button>
+        </div>
+
+    </div>
+
+    <div class="footer">© 2026 PICT Clubs</div>
+
+</div>
+
+</body>
+</html>

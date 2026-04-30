@@ -1,0 +1,39 @@
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="card shadow-lg p-4 todo-card">
+
+    <h2 class="text-center mb-4 text-primary">✨ To-Do List</h2>
+
+    <!-- Input -->
+    <div class="input-group mb-3">
+      <input 
+        [(ngModel)]="task" 
+        class="form-control" 
+        placeholder="Enter your task...">
+
+      <button class="btn btn-primary" (click)="addTask()">
+        {{ editIndex !== null ? 'Update' : 'Add' }}
+      </button>
+    </div>
+
+    <!-- Task List -->
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center"
+          *ngFor="let t of tasks; let i = index">
+
+        <span>{{ t }}</span>
+
+        <div>
+          <button class="btn btn-warning btn-sm me-2" (click)="editTask(i)">✏️</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">🗑️</button>
+        </div>
+
+      </li>
+    </ul>
+
+    <!-- Empty State -->
+    <p class="text-center text-muted mt-3" *ngIf="tasks.length === 0">
+      No tasks added yet 🚀
+    </p>
+
+  </div>
+</div>

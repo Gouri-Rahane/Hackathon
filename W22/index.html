@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PICT Mobile Website</title>
+
+    <!-- jQuery Mobile -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* 🔵 PICT THEME */
+        .ui-header {
+            background-color: #003366 !important;
+            color: white !important;
+        }
+
+        .ui-btn {
+            background-color: #0059b3 !important;
+            color: white !important;
+        }
+
+        .ui-btn-active {
+            background-color: #002244 !important;
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #003366;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🏠 HOME -->
+<div data-role="page" id="home">
+
+    <div data-role="header" data-position="fixed">
+        <h1>PICT College</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <img src="https://via.placeholder.com/400x200">
+
+        <h2>Welcome to PICT</h2>
+        <p>Pune Institute of Computer Technology is one of the top engineering colleges in Pune with excellent placements and academics.</p>
+
+        <div class="card">
+            <h3>Vision</h3>
+            <p>To be a premier institute for education and research.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mission</h3>
+            <p>Provide quality education, innovation and industry-ready students.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">© 2026 PICT College</div>
+
+</div>
+
+
+<!-- 📘 ABOUT -->
+<div data-role="page" id="about">
+
+    <div data-role="header" data-position="fixed">
+        <h1>About PICT</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about" class="ui-btn-active">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <img src="https://via.placeholder.com/400x200">
+
+        <h2>About Us</h2>
+        <p>Established in 1983, PICT is known for excellence in engineering education and placements.</p>
+
+        <div class="card">
+            <h3>Achievements</h3>
+            <ul>
+                <li>Top placements in IT sector</li>
+                <li>High academic performance</li>
+                <li>Strong alumni network</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Why Choose PICT?</h3>
+            <p>✔ Industry exposure<br>✔ Experienced faculty<br>✔ Modern labs</p>
+        </div>
+
+    </div>
+
+    <div class="footer">© 2026 PICT College</div>
+
+</div>
+
+
+<!-- 📚 COURSES -->
+<div data-role="page" id="courses">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Courses</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses" class="ui-btn-active">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <h2>Courses Offered</h2>
+
+        <div class="card">
+            <h3>Computer Engineering</h3>
+            <p>Focus on software development, AI, and systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Information Technology</h3>
+            <p>Focus on networking, web and data technologies.</p>
+        </div>
+
+        <div class="card">
+            <h3>ENTC</h3>
+            <p>Electronics and Communication engineering.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">© 2026 PICT College</div>
+
+</div>
+
+
+<!-- 📞 CONTACT -->
+<div data-role="page" id="contact">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Contact</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact" class="ui-btn-active">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <h2>Contact Us</h2>
+
+        <div class="card">
+            <p><b>Address:</b> Pune, Maharashtra</p>
+            <p><b>Email:</b> pict@college.com</p>
+            <p><b>Phone:</b> 9876543210</p>
+        </div>
+
+        <div class="card">
+            <h3>Send Message</h3>
+            <input placeholder="Your Name">
+            <input placeholder="Your Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Submit</button>
+        </div>
+
+    </div>
+
+    <div class="footer">© 2026 PICT College</div>
+
+</div>
+
+</body>
+</html>

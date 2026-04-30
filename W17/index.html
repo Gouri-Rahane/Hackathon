@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Directory</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef4ff;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 220px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Employee Directory</h2>
+
+<button onclick="loadEmployees()">Load Employees</button>
+
+<div class="container" id="output"></div>
+
+<script>
+function loadEmployees() {
+
+    fetch("http://localhost:3000/employees")
+    .then(res => res.json())
+    .then(data => {
+
+        let result = "";
+
+        data.forEach(item => {
+
+            result += `
+                <div class="card">
+                    <img src="${item.image}">
+                    <h3>${item.name}</h3>
+                    <p>${item.designation}</p>
+                    <p>${item.department}</p>
+                    <p><b>₹${item.salary}</b></p>
+                </div>
+            `;
+        });
+
+        document.getElementById("output").innerHTML = result;
+    })
+    .catch(() => {
+        document.getElementById("output").innerHTML = "Error loading data";
+    });
+}
+</script>
+
+</body>
+</html>

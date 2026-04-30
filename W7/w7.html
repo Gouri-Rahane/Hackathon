@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #edf0f5;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background-color: #3b5998;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .login-input {
+            width: 150px;
+            font-size: 12px;
+        }
+
+        /* LEFT TEXT */
+        .left-text {
+            margin-top: 40px;
+        }
+
+        /* RIGHT FORM */
+        .signup-title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .small-text {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .signup-btn {
+            background-color: #42b72a;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ✅ TOP HEADER -->
+<div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <div class="logo">facebook</div>
+
+        <!-- LOGIN -->
+        <div class="d-flex align-items-center">
+            <input type="text" placeholder="Email or Username" class="form-control form-control-sm login-input me-2">
+            <input type="password" placeholder="Password" class="form-control form-control-sm login-input me-2">
+            <button class="btn btn-light btn-sm">Login</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- ✅ MAIN CONTENT -->
+<div class="container mt-5">
+    <div class="row">
+
+        <!-- LEFT SIDE -->
+        <div class="col-md-6 left-text">
+            <h4>Facebook is useless without friends.<br>Make More Friends.</h4>
+
+            <p>
+                Facebook helps you connect and share with the people in your life.
+            </p>
+
+            <!-- NETWORK IMAGE -->
+            <img src="https://via.placeholder.com/100" class="img-fluid" width="400">
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-md-6">
+
+            <div class="signup-title">Create an Account</div>
+            <p>It’s free and always will be.</p>
+
+            <form>
+
+                <!-- NAME -->
+                <div class="row mb-2">
+                    <div class="col">
+                        <input type="text" placeholder="Firstname" class="form-control">
+                    </div>
+                    <div class="col">
+                        <input type="text" placeholder="Lastname" class="form-control">
+                    </div>
+                </div>
+
+                <input type="email" placeholder="Email" class="form-control mb-2">
+                <input type="email" placeholder="Re-enter email" class="form-control mb-2">
+                <input type="password" placeholder="Password" class="form-control mb-2">
+
+                <!-- DATE -->
+                <input type="text" placeholder="dd/mm/yyyy" class="form-control mb-2">
+
+                <!-- GENDER -->
+                <div class="mb-2">
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender" class="ms-3"> Female
+                </div>
+
+                <p class="small-text">
+                    By clicking create an account, you agree to our Terms.
+                </p>
+
+                <button class="btn signup-btn">Sign Up</button>
+
+            </form>
+
+            <p class="small-text mt-2">Create a page for you.</p>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

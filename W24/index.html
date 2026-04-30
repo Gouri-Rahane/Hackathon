@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Reviews</title>
+
+    <!-- Mobile Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery Mobile -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+<div data-role="page" id="home">
+
+    <div data-role="header" data-theme="b">
+        <h1>🎬 Movie Reviews</h1>
+    </div>
+
+    <!-- NAVBAR -->
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#home" class="ui-btn-active">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div data-role="content">
+        <h2>Welcome</h2>
+        <p>Explore popular movies with ratings and reviews.</p>
+
+        <!-- Collapsible -->
+        <div data-role="collapsible">
+            <h3>Genres</h3>
+            <p>Action, Drama, Sci-Fi, Thriller</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h3>Why This App?</h3>
+            <p>✔ Honest reviews <br> ✔ Latest movies <br> ✔ Simple UI</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- ================= MOVIES ================= -->
+<div data-role="page" id="movies">
+
+    <div data-role="header" data-theme="b">
+        <h1>Movies</h1>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#movies" class="ui-btn-active">Movies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div data-role="content">
+
+        <!-- MOVIE 1 -->
+        <div data-role="collapsible">
+            <h3>Avengers: Endgame</h3>
+            <img src="https://via.placeholder.com/300" style="width:100%">
+            <p><b>Genre:</b> Action, Sci-Fi</p>
+            <p><b>Summary:</b> Avengers fight Thanos to save universe.</p>
+            <p><b>Review:</b> ⭐⭐⭐⭐⭐ Amazing climax!</p>
+        </div>
+
+        <!-- MOVIE 2 -->
+        <div data-role="collapsible">
+            <h3>Inception</h3>
+            <img src="https://via.placeholder.com/300" style="width:100%">
+            <p><b>Genre:</b> Sci-Fi, Thriller</p>
+            <p><b>Summary:</b> A thief enters dreams to steal secrets.</p>
+            <p><b>Review:</b> ⭐⭐⭐⭐⭐ Mind-blowing!</p>
+        </div>
+
+        <!-- MOVIE 3 -->
+        <div data-role="collapsible">
+            <h3>3 Idiots</h3>
+            <img src="https://via.placeholder.com/300" style="width:100%">
+            <p><b>Genre:</b> Comedy, Drama</p>
+            <p><b>Summary:</b> Engineering life story.</p>
+            <p><b>Review:</b> ⭐⭐⭐⭐ Inspiring!</p>
+        </div>
+
+        <!-- MOVIE 4 -->
+        <div data-role="collapsible">
+            <h3>KGF Chapter 2</h3>
+            <img src="https://via.placeholder.com/300" style="width:100%">
+            <p><b>Genre:</b> Action</p>
+            <p><b>Summary:</b> Rise of Rocky.</p>
+            <p><b>Review:</b> ⭐⭐⭐⭐ Mass entertainer!</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CONTACT ================= -->
+<div data-role="page" id="contact">
+
+    <div data-role="header" data-theme="b">
+        <h1>Contact</h1>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#contact" class="ui-btn-active">Contact</a></li>
+        </ul>
+    </div>
+
+    <div data-role="content">
+        <h3>Contact Us</h3>
+        <p><b>Email:</b> movies@gmail.com</p>
+        <p><b>Phone:</b> 9876543210</p>
+    </div>
+
+</div>
+
+</body>
+</html>

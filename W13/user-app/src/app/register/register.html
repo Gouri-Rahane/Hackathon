@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">User Registration</h2>
+
+  <div class="card p-4 shadow">
+
+    <input [(ngModel)]="user.name" class="form-control mb-2" placeholder="Full Name" required>
+
+    <input [(ngModel)]="user.email" type="email" class="form-control mb-2" placeholder="Email" required>
+
+    <input [(ngModel)]="user.mobile" class="form-control mb-2"
+           placeholder="Mobile Number"
+           pattern="[0-9]{10}" required>
+
+    <input [(ngModel)]="user.dob" type="date" class="form-control mb-2" required>
+
+    <input [(ngModel)]="user.city" class="form-control mb-2" placeholder="City" required>
+
+    <textarea [(ngModel)]="user.address" class="form-control mb-2"
+              placeholder="Address" required></textarea>
+
+    <input [(ngModel)]="user.password" type="password" class="form-control mb-2"
+           placeholder="Password"
+           pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@$!%*?&]).{8,}"
+           required>
+
+    <small class="text-muted">
+      Password must be 8+ chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
+    </small>
+
+    <button class="btn btn-primary w-100 mt-3" (click)="register()">Register</button>
+
+    <p class="mt-3 text-center">
+      Already have account? <a routerLink="/login">Login</a>
+    </p>
+
+  </div>
+</div>

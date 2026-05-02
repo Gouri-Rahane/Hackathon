@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book - Bookstore</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="brand">📚 Bookstore</span>
+        <span class="badge">MongoDB</span>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/books" class="active">Books</a>
+            <a href="/add">Add Book</a>
+        </div>
+    </nav>
+    <div class="page">
+        <div class="form-card">
+            <h2>Update Book</h2>
+            <form action="/update/{{TITLE_ENC}}" method="POST">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" value="{{TITLE}}" disabled>
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" name="author" value="{{AUTHOR}}" required>
+                </div>
+                <div class="form-group">
+                    <label>Price (Rs.)</label>
+                    <input type="number" name="price" value="{{PRICE}}" required>
+                </div>
+                <div class="form-group">
+                    <label>Genre</label>
+                    <input type="text" name="genre" value="{{GENRE}}" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success">Update</button>
+                    <a href="/books" class="btn btn-ghost">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Books - Online Bookstore</title>
+    <title>Books - Bookstore</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <h2>📚 Online Bookstore</h2>
+    <nav class="navbar">
+        <span class="brand">📚 Bookstore</span>
+        <span class="badge">MongoDB</span>
         <div class="nav-links">
             <a href="/">Home</a>
+            <a href="/books" class="active">Books</a>
             <a href="/add">Add Book</a>
-            <a href="/books">View Books</a>
         </div>
-    </div>
+    </nav>
+    <div class="page">
+        <div class="page-header">
+            <h2>Book Records</h2>
+            <a href="/add" class="btn btn-primary">+ Add Book</a>
+        </div>
 
-    <!-- This page is served dynamically from server.js -->
-    <!-- The /books route builds the table with real data -->
-    <div class="container">
-        <h2>Loading books...</h2>
-        <p>Please visit <a href="/books">/books</a> to see all books.</p>
-    </div>
+        <!-- Stat cards -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="label">Total Books</div>
+                <div class="value">{{TOTAL}}</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Genres</div>
+                <div class="value">{{GENRES}}</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Avg. Price</div>
+                <div class="value">₹{{AVG_PRICE}}</div>
+            </div>
+        </div>
 
+        <!-- Table / empty state -->
+        <div class="panel">{{CONTENT}}</div>
+    </div>
 </body>
 </html>

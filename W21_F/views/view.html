@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Books - Online Bookstore</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h2>📚 Online Bookstore</h2>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/add">Add Book</a>
+            <a href="/books">View Books</a>
+        </div>
+    </div>
+
+    <!-- This page is served dynamically from server.js -->
+    <!-- The /books route builds the table with real data -->
+    <div class="container">
+        <h2>Loading books...</h2>
+        <p>Please visit <a href="/books">/books</a> to see all books.</p>
+    </div>
+
+</body>
+</html>

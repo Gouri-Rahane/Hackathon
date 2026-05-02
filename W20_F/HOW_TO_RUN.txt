@@ -1,0 +1,344 @@
+
+================================================================
+   EMPLOYEE MANAGEMENT SYSTEM - COMPLETE SETUP GUIDE
+   For Beginners | Step-by-Step Instructions
+================================================================
+
+----------------------------------------------------------------
+  WHAT IS THIS PROJECT?
+----------------------------------------------------------------
+
+This is a simple Employee Management System built using:
+  - Node.js      (runs JavaScript on the server)
+  - Express.js   (web framework for Node.js)
+  - MongoDB      (database to store employee records)
+
+If MongoDB is not installed, the app will still work using
+an in-memory array (data will reset when server restarts).
+
+
+================================================================
+  STEP 1 - INSTALL NODE.JS
+================================================================
+
+1. Open your browser and go to:
+   https://nodejs.org
+
+2. Download the LTS version (recommended for most users)
+
+3. Run the installer (.msi file on Windows)
+   - Click Next > Next > Install
+   - Keep all default settings
+
+4. After installation, verify it worked:
+   - Open Command Prompt (press Win + R, type cmd, press Enter)
+   - Type this command and press Enter:
+
+        node -v
+
+   - You should see something like: v18.17.0 (any version is fine)
+
+5. Also check npm (Node Package Manager) is installed:
+
+        npm -v
+
+   - You should see something like: 9.6.7
+
+
+================================================================
+  STEP 2 - INSTALL MONGODB (OPTIONAL but Recommended)
+================================================================
+
+NOTE: If you skip this step, the app will still work using
+      in-memory storage. But data will be lost on restart.
+
+--- For Windows ---
+
+1. Go to: https://www.mongodb.com/try/download/community
+
+2. Select:
+   - Version: Latest
+   - Platform: Windows
+   - Package: MSI
+
+3. Download and run the installer
+   - Choose "Complete" installation
+   - Check the box: "Install MongoDB as a Service"
+   - Click Next > Install
+
+4. After installation, MongoDB runs automatically in background.
+
+5. To verify MongoDB is running, open Command Prompt and type:
+
+        mongod --version
+
+   You should see: db version v6.x.x (or similar)
+
+--- For Mac ---
+
+1. Install Homebrew first (if not installed):
+   Open Terminal and run:
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2. Then install MongoDB:
+        brew tap mongodb/brew
+        brew install mongodb-community
+
+3. Start MongoDB:
+        brew services start mongodb-community
+
+--- For Linux (Ubuntu) ---
+
+1. Open Terminal and run these commands one by one:
+
+        sudo apt update
+        sudo apt install -y mongodb
+        sudo systemctl start mongodb
+        sudo systemctl enable mongodb
+
+
+================================================================
+  STEP 3 - DOWNLOAD / GET THE PROJECT FILES
+================================================================
+
+Make sure you have these files in your project folder:
+
+   employee-management/
+   ├── server.js          (main application file)
+   ├── package.json       (project configuration)
+   └── HOW_TO_RUN.txt     (this file)
+
+If you downloaded a ZIP file:
+1. Right-click the ZIP file
+2. Click "Extract All"
+3. Choose a folder location (e.g., Desktop)
+4. Open that extracted folder
+
+
+================================================================
+  STEP 4 - OPEN THE PROJECT IN COMMAND PROMPT / TERMINAL
+================================================================
+
+--- On Windows ---
+
+Option A (Easy way):
+1. Open the project folder in File Explorer
+2. Click on the address bar at the top
+3. Type "cmd" and press Enter
+   (This opens Command Prompt directly in that folder)
+
+Option B:
+1. Press Win + R
+2. Type "cmd" and press Enter
+3. Navigate to your project folder using:
+
+        cd Desktop\employee-management
+
+   (Replace "Desktop\employee-management" with your actual path)
+
+--- On Mac / Linux ---
+
+1. Open Terminal
+2. Navigate to the project folder:
+
+        cd ~/Desktop/employee-management
+
+   (Replace with your actual folder path)
+
+
+================================================================
+  STEP 5 - INSTALL PROJECT DEPENDENCIES
+================================================================
+
+In the Command Prompt / Terminal (inside the project folder),
+run this command:
+
+        npm install
+
+This will:
+- Read the package.json file
+- Download Express.js and Mongoose automatically
+- Create a "node_modules" folder (this is normal)
+
+Wait for it to finish. You will see something like:
+"added 94 packages"
+
+NOTE: You need internet connection for this step only.
+      After this, everything works offline.
+
+
+================================================================
+  STEP 6 - START THE APPLICATION
+================================================================
+
+In the same Command Prompt / Terminal, run:
+
+        node server.js
+
+You should see this output:
+
+        Server running at http://localhost:3000
+        Open browser: http://localhost:3000/employees
+
+If MongoDB is connected:
+        Connected to MongoDB successfully
+
+If MongoDB is NOT installed:
+        MongoDB not available. Using in-memory array as fallback.
+
+
+================================================================
+  STEP 7 - OPEN IN BROWSER
+================================================================
+
+1. Open any web browser (Chrome, Firefox, Edge)
+
+2. Type this in the address bar and press Enter:
+
+        http://localhost:3000
+
+   OR directly go to:
+
+        http://localhost:3000/employees
+
+3. You will see the Employee Management System homepage!
+
+
+================================================================
+  HOW TO USE THE APPLICATION
+================================================================
+
+The app has these pages:
+
+  /employees        - View all employees in a table
+  /add              - Add a new employee (form)
+  /edit/:name       - Edit an existing employee
+  /delete/:name     - Delete an employee
+
+Navigation:
+- Use the top navbar to switch between pages
+- Click "Add Employee" button to add new records
+- Click "Edit" button in the table to update an employee
+- Click "Delete" button to remove an employee
+
+
+================================================================
+  HOW TO STOP THE SERVER
+================================================================
+
+Go back to Command Prompt / Terminal and press:
+
+        Ctrl + C
+
+This will stop the server.
+
+
+================================================================
+  HOW TO RESTART THE SERVER NEXT TIME
+================================================================
+
+Every time you want to use the app:
+
+1. Open Command Prompt in the project folder
+2. Run:
+        node server.js
+3. Open browser at http://localhost:3000/employees
+
+
+================================================================
+  TROUBLESHOOTING - COMMON PROBLEMS & SOLUTIONS
+================================================================
+
+PROBLEM: 'node' is not recognized as a command
+SOLUTION: Node.js is not installed. Go back to Step 1.
+
+--
+
+PROBLEM: npm install gives errors
+SOLUTION:
+  - Make sure you are inside the project folder
+  - Check your internet connection
+  - Try running: npm install --force
+
+--
+
+PROBLEM: Port 3000 is already in use
+SOLUTION:
+  - Another app is using port 3000
+  - Open server.js and change line:
+      const PORT = 3000;
+    to:
+      const PORT = 4000;
+  - Then restart: node server.js
+  - Open browser at: http://localhost:4000
+
+--
+
+PROBLEM: MongoDB connection failed (but app still works)
+SOLUTION:
+  - This is okay! The app uses in-memory storage as backup.
+  - Data will be lost when you stop the server.
+  - To fix: Install MongoDB (see Step 2)
+
+--
+
+PROBLEM: Page not loading in browser
+SOLUTION:
+  - Make sure the server is running (node server.js)
+  - Check the URL is exactly: http://localhost:3000
+  - Try a different browser
+
+--
+
+PROBLEM: Changes not saving (data disappears on restart)
+SOLUTION:
+  - You are running in In-Memory mode (MongoDB not connected)
+  - Install and start MongoDB to save data permanently
+
+
+================================================================
+  PROJECT FILE STRUCTURE EXPLAINED
+================================================================
+
+  server.js
+  - The main and only code file
+  - Contains all routes, database logic, and HTML
+  - Everything is in one file for simplicity
+
+  package.json
+  - Lists the project name and dependencies
+  - npm install reads this file to know what to download
+
+  node_modules/ (created after npm install)
+  - Contains all downloaded packages
+  - Do NOT edit or delete this folder
+
+  HOW_TO_RUN.txt
+  - This guide file
+
+
+================================================================
+  TECHNOLOGIES USED
+================================================================
+
+  Node.js      - JavaScript runtime (runs JS outside browser)
+  Express.js   - Web server framework
+  Mongoose     - MongoDB connection library
+  MongoDB      - NoSQL database (stores data as documents)
+  HTML/CSS     - For displaying pages in the browser
+
+
+================================================================
+  QUICK REFERENCE COMMANDS
+================================================================
+
+  Install dependencies:    npm install
+  Start the server:        node server.js
+  Stop the server:         Ctrl + C
+  Open in browser:         http://localhost:3000/employees
+
+
+================================================================
+  CREATED FOR: Practical Exam Submission
+  STACK: Node.js + Express.js + MongoDB
+================================================================

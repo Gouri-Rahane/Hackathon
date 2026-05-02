@@ -1,0 +1,68 @@
+# Installation and Setup Guide for Music Database Project
+
+## Prerequisites
+Before running this project, ensure you have the following installed on your system:
+
+1. **Node.js** (version 14 or higher recommended)
+   - Download from: https://nodejs.org/
+   - Verify installation: `node --version`
+
+2. **MongoDB** (Community Edition)
+   - Download from: https://www.mongodb.com/try/download/community
+   - Follow installation instructions for your OS
+   - Start MongoDB service (usually runs on localhost:27017)
+
+## Step-by-Step Installation and Running Guide
+
+### Step 1: Clone or Download the Project
+- If using Git: `git clone <repository-url>`
+- Or download the ZIP file and extract it to your desired location
+
+### Step 2: Navigate to the Project Directory
+```
+cd path/to/your/project/directory
+```
+Replace `path/to/your/project/directory` with the actual path where you placed the project files.
+
+### Step 3: Install Dependencies
+Run the following command to install all required Node.js packages:
+```
+npm install
+```
+This will install:
+- express (^4.18.2)
+- mongoose (^7.6.3)
+
+### Step 4: Ensure MongoDB is Running
+- On Windows: Start MongoDB service from Services panel or run `mongod` in a terminal
+- On macOS/Linux: Run `sudo systemctl start mongod` or `brew services start mongodb/brew/mongodb-community`
+- Verify MongoDB is running by checking if it's listening on port 27017
+
+### Step 5: Run the Application
+Start the server using one of these commands:
+```
+npm start
+```
+or
+```
+node server.js
+```
+
+### Step 6: Verify the Application is Running
+- The server should start and display a message indicating it's listening on a port (usually 3000 or as configured)
+- Open your web browser and navigate to `http://localhost:3000` (or the port shown in the console)
+- You should see the Music CRUD application running
+
+## Troubleshooting
+- If `npm install` fails, ensure you have internet connection and Node.js is properly installed
+- If MongoDB connection fails, check that MongoDB service is running and accessible
+- If the server doesn't start, check for any error messages in the console and ensure all dependencies are installed
+
+## Project Structure
+- `server.js`: Main server file
+- `package.json`: Project configuration and dependencies
+
+## Additional Notes
+- This is a Music CRUD (Create, Read, Update, Delete) application built with Express.js and MongoDB
+- Make sure MongoDB is running before starting the application
+- The application will connect to MongoDB on the default port (27017)

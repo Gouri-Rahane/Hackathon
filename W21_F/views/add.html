@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book - Online Bookstore</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h2>📚 Online Bookstore</h2>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/add">Add Book</a>
+            <a href="/books">View Books</a>
+        </div>
+    </div>
+
+    <!-- Add Book Form -->
+    <div class="container">
+        <h2>Add a New Book</h2>
+        <p>Fill in the details below to add a book to the store.</p>
+
+        <form action="/add" method="POST">
+
+            <div class="form-group">
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" name="title" placeholder="e.g. The Great Gatsby" required>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author Name:</label>
+                <input type="text" id="author" name="author" placeholder="e.g. F. Scott Fitzgerald" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price (Rs.):</label>
+                <input type="number" id="price" name="price" placeholder="e.g. 350" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre" required>
+                    <option value="">-- Select Genre --</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-Fiction">Non-Fiction</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Biography">Biography</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-update">Add Book</button>
+            <a href="/books" class="btn btn-view">View All Books</a>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+============================================================
+   ONLINE BOOKSTORE - Student Project
+   Node.js + Express.js + MongoDB (Local)
+============================================================
+
+------------------------------------------------------------
+REQUIREMENTS (What you need installed on your computer)
+------------------------------------------------------------
+
+1. Node.js
+   - Download from: https://nodejs.org
+   - Recommended version: 16 or above
+   - To check if installed, open terminal and type:
+       node --version
+
+2. npm (comes with Node.js automatically)
+   - To check if installed:
+       npm --version
+
+3. MongoDB (Local - Community Edition)
+   - Download from: https://www.mongodb.com/try/download/community
+   - Install and make sure the MongoDB service is running
+   - Default connection: mongodb://127.0.0.1:27017
+   - To check if MongoDB is running, open terminal and type:
+       mongod --version
+
+   NOTE: If MongoDB is NOT installed or not running,
+   the app will automatically use an in-memory array
+   as a fallback. The app will still work fine!
+
+------------------------------------------------------------
+HOW TO INSTALL AND RUN THE PROJECT
+------------------------------------------------------------
+
+Step 1: Open terminal (Command Prompt or PowerShell)
+        and go to the project folder.
+
+        Example:
+            cd C:\Users\YourName\online-bookstore
+
+Step 2: Install required packages (only needed once)
+
+            npm install
+
+        This will install:
+        - express  (web framework)
+        - mongoose (MongoDB connection library)
+
+Step 3: Start MongoDB (if you have it installed)
+
+        On Windows:
+            - Open Services and start "MongoDB"
+            - OR open a new terminal and run: mongod
+
+        On Mac/Linux:
+            - Run: sudo systemctl start mongod
+            - OR: brew services start mongodb-community
+
+Step 4: Start the application
+
+            node server.js
+
+        You should see:
+            Server is running at http://localhost:3000
+            Connected to MongoDB successfully!
+
+        OR if MongoDB is not available:
+            Server is running at http://localhost:3000
+            MongoDB not available. Using in-memory array as fallback.
+
+Step 5: Open your browser and go to:
+
+            http://localhost:3000
+
+------------------------------------------------------------
+PROJECT PAGES
+------------------------------------------------------------
+
+Home Page       -->  http://localhost:3000/
+Add Book        -->  http://localhost:3000/add
+View All Books  -->  http://localhost:3000/books
+
+------------------------------------------------------------
+API ROUTES (Backend)
+------------------------------------------------------------
+
+GET  /           - Home page
+GET  /add        - Show Add Book form
+POST /add        - Submit new book
+GET  /books      - View all books (table format)
+GET  /update/:title  - Show update form for a book
+POST /update/:title  - Submit updated book details
+GET  /delete/:title  - Delete a book by title
+
+------------------------------------------------------------
+FILE STRUCTURE
+------------------------------------------------------------
+
+online-bookstore/
+│
+├── server.js           --> Main backend file (all routes here)
+├── package.json        --> Project info and dependencies
+├── HOW_TO_RUN.txt      --> This file
+│
+├── public/
+│   └── styles.css      --> CSS styling for all pages
+│
+└── views/
+    ├── index.html      --> Home page
+    ├── add.html        --> Add Book page
+    └── view.html       --> View Books (reference file)
+
+------------------------------------------------------------
+DATABASE INFO
+------------------------------------------------------------
+
+Database Name   : bookstore
+Collection Name : books
+Connection URL  : mongodb://127.0.0.1:27017/bookstore
+
+If MongoDB is not running, the app uses a built-in
+in-memory array with 2 sample books already loaded.
+Data will reset when the server restarts in fallback mode.
+
+------------------------------------------------------------
+TROUBLESHOOTING
+------------------------------------------------------------
+
+Problem: "Cannot find module 'express'"
+Solution: Run "npm install" again in the project folder
+
+Problem: "Port 3000 already in use"
+Solution: Change PORT value in server.js from 3000 to 3001
+
+Problem: MongoDB not connecting
+Solution: The app will use in-memory fallback automatically.
+          No action needed. Just run "node server.js"
+
+Problem: Page not loading
+Solution: Make sure server is running (node server.js)
+          and visit http://localhost:3000
+
+------------------------------------------------------------
+MADE BY: [Your Name]
+SUBJECT: [Your Subject Name]
+DATE   : 2026
+============================================================

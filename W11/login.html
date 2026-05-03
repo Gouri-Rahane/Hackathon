@@ -11,10 +11,8 @@
     <h2 class="text-center">Login</h2>
 
     <form id="loginForm">
-
-        <input type="text" id="username" class="form-control mb-2" placeholder="Email" required>
+        <input type="email" id="username" class="form-control mb-2" placeholder="Email" required>
         <input type="password" id="loginPassword" class="form-control mb-2" placeholder="Password" required>
-
         <button class="btn btn-success w-100">Login</button>
     </form>
 
@@ -25,15 +23,22 @@
 document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("loginPassword").value;
+
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
     let found = users.find(u =>
-        u.email === username.value &&
-        u.password === loginPassword.value
+        u.email === username &&
+        u.password === password
     );
 
     if(found) {
         alert("Login Successful!");
+
+        // Save login session
+        localStorage.setItem("loggedInUser", JSON.stringify(found));
+
         window.location.href = "users.html";
     } else {
         alert("Invalid Credentials!");

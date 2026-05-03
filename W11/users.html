@@ -10,6 +10,8 @@
 <div class="container mt-5">
     <h2 class="text-center">Registered Users</h2>
 
+    <button class="btn btn-danger float-end mb-3" onclick="logout()">Logout</button>
+
     <table class="table table-bordered mt-3">
         <thead>
             <tr>
@@ -24,10 +26,17 @@
 </div>
 
 <script>
+// Protect page
+let loggedIn = JSON.parse(localStorage.getItem("loggedInUser"));
+if(!loggedIn){
+    alert("Please login first!");
+    window.location.href = "login.html";
+}
+
+// Load users
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
 let output = "";
-
 users.forEach(u => {
     output += `
         <tr>
@@ -40,6 +49,12 @@ users.forEach(u => {
 });
 
 document.getElementById("data").innerHTML = output;
+
+// Logout
+function logout(){
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "login.html";
+}
 </script>
 
 </body>
